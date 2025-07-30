@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Survey{% endblock %}
+{% block content %}
+<div class="survey-container" style="max-width: 600px; margin: 0 auto; text-align: left;">
+    <h2 style="text-align: center;">Employee Survey</h2>
+    <form method="POST" class="survey-form">
+        <label for="department">Department</label><br>
+        <input type="text" name="department" required><br>
+
+        <label for="age">Age</label><br>
+        <input type="number" name="age" required><br>
+
+        <label for="gender">Gender</label><br>
+        <select name="gender" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label for="rating">Overall Rating(1 - 5)</label><br>
+        <input type="number" name="rating" min="1" max="5" required><br>
+
+        <label for="job_satisfaction">Job Satisfaction(1 - 5)</label><br>
+        <input type="number" name="job_satisfaction" min="1" max="5" required><br>
+
+        <label for="work_life_balance">Work-Life Balance(1 - 5)</label><br>
+        <input type="number" name="work_life_balance" min="1" max="5" required><br>
+
+        <label for="comments">Comments</label><br>
+        <textarea name="comments"></textarea><br>
+
+        <label for="suggestions">Suggestions</label><br>
+        <textarea name="suggestions"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
+ 

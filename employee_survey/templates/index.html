@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="survey-container" style="max-width: 600px; margin: 0 auto; text-align: left;">
+    <h2 style="text-align: center;">Employee Survey Details</h2>
+
+    {% if survey %}
+        <p><strong>Department:</strong> {{ survey.department }}</p>
+        <p><strong>Age:</strong> {{ survey.age }}</p>
+        <p><strong>Gender:</strong> {{ survey.gender }}</p>
+        <p><strong>Overall Rating:</strong> {{ survey.rating }}</p>
+        <p><strong>Job Satisfaction:</strong> {{ survey.job_satisfaction }}</p>
+        <p><strong>Work-Life Balance:</strong> {{ survey.work_life_balance }}</p>
+        <p><strong>Comments:</strong> {{ survey.comments }}</p>
+        <p><strong>Suggestions:</strong> {{ survey.suggestions }}</p>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('edit_survey', survey_id=survey.id) }}">
+                <button>Edit</button>
+            </a>
+            <a href="{{ url_for('delete_survey', survey_id=survey.id) }}" onclick="return confirm('Are you sure you want to delete this survey?');">
+                <button>Delete</button>
+            </a>
+            <a href="{{ url_for('logout') }}">
+                <button>Logout</button>
+            </a>
+        </div>
+    {% else %}
+        <p style="text-align: center;">No survey submitted yet.</p>
+        <div style="text-align: center;">
+            <a href="{{ url_for('survey') }}">
+                <button>Fill Survey</button>
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

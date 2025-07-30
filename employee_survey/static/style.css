@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #e6f2f3; /* light teal background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #007B7F; /* teal heading */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #009999; /* deeper teal button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #007B7F; /* slightly darker teal on hover */
+}
+
+a {
+    color: #007B7F; /* teal links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-header {
+    background-color: #4a69bd; /* pleasant blue shade matching your theme */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* adjust based on header/footer space */
+}
+
+.login-container {
+    width: 300px;
+    text-align: center;
+    font-size: 18px; /* slightly increased font size */
+    padding: 20px;
+    background-color: #f9f9f9; /* optional subtle background */
+    border-radius: 8px; /* optional rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional soft shadow */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+    font-size: 16px; /* slightly larger input text */
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.survey-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* adjust based on header/footer size */
+}
+
+.survey-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh; /* adjusts vertical centering within viewport */
+    text-align: center;
+}
+
+.survey-form {
+    display: inline-block;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 30px 40px; /* slightly more padding for breathing space */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 400px; /* increased width for better form readability */
+    max-width: 90%; /* keeps responsiveness on smaller screens */
+}
+
+
+.survey-form input[type="text"],
+.survey-form input[type="number"],
+.survey-form select,
+.survey-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.survey-form input[type="submit"] {
+    background-color: #4a69bd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.survey-form input[type="submit"]:hover {
+    background-color: #3b55a0;
+}

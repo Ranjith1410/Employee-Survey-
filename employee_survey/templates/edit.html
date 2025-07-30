@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Edit Survey{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh; flex-direction: column;">
+    <h2>Edit Survey Response</h2>
+    <form method="POST" style="width: 400px;">
+        <label>Department:</label>
+        <input type="text" name="department" value="{{ survey.department }}" required><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="18" max="65" value="{{ survey.age }}" required><br>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="{{ survey.gender }}">{{ survey.gender }}</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select><br>
+
+        <label>Rating (1-5) for Work Environment:</label>
+        <input type="number" name="rating" min="1" max="5" value="{{ survey.rating }}" required><br>
+
+        <label>Job Satisfaction (1-5):</label>
+        <input type="number" name="job_satisfaction" min="1" max="5" value="{{ survey.job_satisfaction }}" required><br>
+
+        <label>Work-Life Balance (1-5):</label>
+        <input type="number" name="work_life_balance" min="1" max="5" value="{{ survey.work_life_balance }}" required><br>
+
+        <label>Comments:</label>
+        <textarea name="comments" rows="4">{{ survey.comments }}</textarea><br>
+
+        <label>Suggestions for Improvement:</label>
+        <textarea name="suggestions" rows="4">{{ survey.suggestions }}</textarea><br>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}
